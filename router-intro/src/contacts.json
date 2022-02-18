@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Wendy",
+        "id": 123984,
+        "favColor": "White",
+        "isStudent": true
+    },
+    {
+        "name": "Josh",
+        "id": 223874,
+        "favColor": "Blue",
+        "isStudent": true
+    },
+    {
+        "name": "Dianelys",
+        "id": 823487,
+        "favColor": "Pink",
+        "isStudent": true
+    },
+    {
+        "name": "Ryan",
+        "id": 9234798,
+        "favColor": "Orange",
+        "isStudent": true
+    },
+    {
+        "name": "Carlos",
+        "id": 82377493,
+        "favColor": "Purple",
+        "isStudent": true
+    },
+    {
+        "name": "Mike",
+        "id": 8747230,
+        "favColor": "Magenta",
+        "isStudent": false
+    }
+]
