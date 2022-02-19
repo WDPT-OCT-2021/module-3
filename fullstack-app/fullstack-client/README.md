@@ -68,12 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-## =========================================================
-
--   required
-
-1. npm i react-router-dom
-2. in index.js you must add in <React.StrictMode> < BrowserRouter > which comes from react-router-dom and wrap it around <App />
-3. in App.js we want to import { Routes, Route } from 'react-router-dom, add Routes to your return / render() and add Route in your Routes
-4. with the updated to react-router-dom v6, all routes will be set the same way. parameters sent via the url will now require an import in the child component receiving the url parameter of 'import { useParams } from "react-router-dom";' --- this will give you the parameter key: value that you set up in your route

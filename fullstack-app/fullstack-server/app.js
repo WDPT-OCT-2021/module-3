@@ -8,7 +8,7 @@ const hbs = require("hbs");
 const mongoose = require("mongoose");
 const logger = require("morgan");
 const path = require("path");
-
+const cors = require("cors");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const flash = require("connect-flash");
@@ -36,6 +36,14 @@ app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// *** cors is used to create a whitelist of domains that you are allowing to access your server and the routes associated with your server. the origin is usually set to default '*' which is the same as true, which allows all domains to access the server. You may also enter a string of 1 domain or an array of strings of multiple domains in which you would like to whitelist for your server.
+app.use(
+    cors({
+        origin: true,
+        credentials: true,
+    })
+);
 
 // Express View engine setup
 
@@ -83,6 +91,6 @@ app.use("/", index);
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
 
-app.use("/products", require("./routes/products-routes/products"));
+app.use("/api/products", require("./routes/products-routes/products"));
 
 module.exports = app;

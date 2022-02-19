@@ -124,4 +124,14 @@ router.get("/logout", (req, res) => {
     });
 });
 
+router.get("/user", (req, res, next) => {
+    if (!req.user) {
+        return res.json({ success: false, message: "User is not logged in" });
+    }
+
+    res.json({ success: true, user: req.user });
+    // res.json({ success: req.user !== null, user: req.user || null });
+    // res.json({ success: !!req.user, user: req.user || null });
+});
+
 module.exports = router;
